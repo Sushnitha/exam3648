@@ -7,6 +7,7 @@ def form():
 def greet():
     name=request.form['name']
     age=request.form['age']
-    return render_template('greetings.html',name=name,age=age)
+    num=request.form['num']
+    return render_template('greetings.html',name=name,age=age,num=num)
 if __name__==("__main__"):
     app.run(host="0.0.0.0",debug=True)
